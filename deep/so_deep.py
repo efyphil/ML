@@ -326,7 +326,7 @@ accuracy_score(y_test1, y_pred)
 
 
 from sklearn.model_selection import RandomizedSearchCV
-
+from functools import partial
 def leaky_relu(alpha=0.01):
     def parametrized_leaky_relu(z, name=None):
         return tf.maximum(alpha * z, z, name=name)
